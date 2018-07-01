@@ -27,13 +27,21 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
+<<<<<<< HEAD
                         sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war root@${params.tomcat_dev}:/home/tomcat/apache-tomcat-8.5.31/webapps/"
+=======
+                        sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war root@${params.tomcat_dev}:/home/tomcat/apache-tomcat-8.5.31//webapps"
+>>>>>>> branch 'master' of https://github.com/pardhs/jenkinspipeline.git
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
+<<<<<<< HEAD
                         sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war root@${params.tomcat_prod}:/home/tomcat/apache-tomcat-8.5.31/webapps/"
+=======
+                        sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war root@${params.tomcat_prod}:/home/tomcat/apache-tomcat-8.5.31/webapps"
+>>>>>>> branch 'master' of https://github.com/pardhs/jenkinspipeline.git
                     }
                 }
             }
